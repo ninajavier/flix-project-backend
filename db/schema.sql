@@ -7,13 +7,13 @@ CREATE DATABASE flix_dev;
 CREATE TABLE shows (
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
-    year YEAR,
+    year INT,
     tv_rating VARCHAR(10),
     num_episodes SMALLINT,
     num_seasons SMALLINT,
-    cast TEXT,
+    actors TEXT,
     star_rating NUMERIC,
-    CHECK (rating >= 0 AND rating <= 5),
+    CHECK (star_rating >= 0 AND star_rating <= 5),
     genre TEXT,
     is_favorite BOOLEAN
 );
